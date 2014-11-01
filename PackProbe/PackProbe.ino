@@ -25,17 +25,20 @@ PackProbe is based on:
 
 Configure and then load the SoftI2CMaster library
 
-The default is for data on DPin6 and clock on DPin7 on the Arduino Yun.
+The default is for data (SDA) on DPin6 and clock (SDC) on DPin8 on the Arduino Yun.
 
-For more details on configuring the library see http://playground.arduino.cc/Main/SoftwareI2CLibrary
+For more details on configuring the library, see:
+  http://playground.arduino.cc/Main/SoftwareI2CLibrary
 
-For background on Arduino Port and Pin Mapping, see: http://www.arduino.cc/en/Reference/PortManipulation
+For background on Arduino Port and Pin Mapping, see: 
+  http://www.arduino.cc/en/Reference/PortManipulation
 
 To find the pin mappings for your board see:
+  Atmega 168/328 MCU (Uno, Mini, Nano, Fio, Pro): 
+    http://arduino.cc/en/Hacking/PinMapping168
 
-Atmega 168/328 MCU (Uno, Mini, Nano, Fio, Pro): http://arduino.cc/en/Hacking/PinMapping168
-
-Atmega 32u4 MCU (Yun, Leonardo, Micro): http://arduino.cc/en/Hacking/PinMapping32u4
+  Atmega 32u4 MCU (Yun, Leonardo, Micro): 
+    http://arduino.cc/en/Hacking/PinMapping32u4
 
 
 *************************************************************************************/
@@ -44,9 +47,9 @@ Atmega 32u4 MCU (Yun, Leonardo, Micro): http://arduino.cc/en/Hacking/PinMapping3
 #define SDA_PORT PORTD
 #define SDA_PIN 7
 
-// Arduino DPin7 = Atmega PE6
-#define SCL_PORT PORTE
-#define SCL_PIN 6
+// Arduino DPin8 = Atmega PB4
+#define SCL_PORT PORTB
+#define SCL_PIN 4
 
 #define I2C_SLOWMODE 1
 #include <SoftI2CMaster.h>
